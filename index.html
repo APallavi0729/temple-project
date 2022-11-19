@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+	*,*::before,*::after {
+  box-sizing: border-box;
+}
+body{
+	margin: 0;
+	font-family: arial;
+	background-color:#e6dfdc;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.6;
+	color: #333;
+}
+img{
+	max-width: 100%;
+}
+body,html{
+	scroll-behavior: smooth;
+}
+.header{
+	position: fixed;
+	left: 0;
+	top:0;
+	width: 100%;
+	z-index: 100;
+	padding: 20px;
+}
+.main_nav{}
+.main_nav ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.main_nav ul li{
+	display: inline-block;
+	margin: 0 0 0 20px;
+	font-size: 16px;
+}
+.main_nav ul li a{
+	color: #fff;
+	transition: all 0.3s ease-out;
+	text-decoration:none;
+}
+.main_nav ul li:hover a{
+	color: #f12626;
+}
+
+/*banner*/
+.banner{
+	background-color:#fc6b32;
+	background-blend-mode: darken;
+	min-height: 100vh;
+	position: relative;
+	background-size: cover;
+	color: #fff;
+	padding: 100px 50px 100px 0;
+}
+.banner h1{
+	font-size: 60px;
+	color: #fff;
+	font-weight: 700;
+}
+.socila_links{
+	position: absolute;
+	right: 20px;
+	top:50%;
+	transform: translateY(-50%);
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size:22px;
+}
+.socila_links li{
+	margin: 10px 0;
+}
+.socila_links li a{
+	color: #fff
+}
+.socila_links li a:hover{
+	color: #f12626
+}
+.banner_cont{
+	padding: 30px;
+	background:rgba(249, 250, 250, 0.6);
+	align-items: center;
+	transform: scaleY(0);
+	animation:1s scaleAnim 1s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+#section-03{
+	color: #fff;
+	margin-left: auto;
+}
+
+@keyframes scaleAnim{
+	0%{transform: scaleY(0); opacity: 0;}
+	100%{transform: scaleY(1); opacity: 1; }
+}
+
+/*about-section*/
+.about-section{
+	background-color:#fd8750;
+	padding: 80px 20px;
+	color: #fff;		
+}
+.about-section h2{
+	font-size: 40px;
+	color: #fff;
+	margin: 0 0 30px;
+}
+.bdr-btm{
+	position: relative;
+	padding-bottom: 15px;
+}
+.bdr-btm:after{
+	content: "";
+	width: 50px;
+	height: 3px;
+	background-color: #f12626;
+	position: absolute;
+	left: 0;
+	top: 100%;
+}
+.bdr-btm.bdr-btm-center:after{
+	left: 50%;
+	margin-left: -25px;
+}
+.btn1{
+	border: 0px;
+	text-decoration: none;
+	display: inline-block;
+  color: white;
+  background: #87d4d6;
+  padding: 11px 25px;
+  margin: 0 0 15px 0;
+  font: 14px/20px "Open Sans", sans-serif;
+  height: 42px;
+  outline: none;
+  width: auto;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+
+
+/*This Media Query use for Mobile View*/
+@media screen and (max-width: 767px){
+	.header{
+		padding: 20px 0;
+	}
+	.logo{
+		display: block;
+		margin: 0 auto;
+		width: 100px;
+	} 
+	.main_nav{
+		text-align: center;
+		margin-bottom: 30px;
+	} 
+	.main_nav ul li{
+		margin: 0 3px;
+	}	
+
+	.banner{
+		background-size: 200%;
+		background-position: top center;
+    background-repeat: no-repeat;
+	}
+	.banner h1{ font-size: 40px; }
+
+
+}
+
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<header class="header">
+	<div class="container-fluid">
+		<div class="row d-flex justify-content-between">
+			<div class="col-md-auto">
+				<a href="#!" class="logo"><img src="images/logo.png"alt="logo"height="70px"width="200px"></a>
+			</div>
+			<div class="col-md-auto">
+				<nav class="main_nav">
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About Us</a></li>
+						<li><a href="#temple">Temple</a></li>
+						<li><a href="#contact">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>		
+	</div>
+</header>	
+
+<div class="banner d-flex align-items-center" style="background-image: url('images/banner.jpg');" id="home">
+	<ul class="socila_links">
+		<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+		<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+		<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+	</ul>	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-45">
+				<div class="banner_cont">
+					<img src="./images/ganeshay.jpg">
+					<br>
+					<br>
+					<h3><font color="orange"text-align="center">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।</p></h3>
+						<h3><p>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥</font></p></h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+
+
+
+<!--
+        - #temple CATEGORY SECTION
+      -->
+      <section class="category" id="schorlarship">
+        <h2 class="section-title">Search temple with states</h2>
+
+        <ul class="course-item-group">
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Upto 8">Andhra Pradesh</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Upto 8">Arunachal Pradesh</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Upto 8">Assam</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Upto 8">Bihar</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Upto 8">Chhatisgarh</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?9 to 10">Goa</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+              class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?11 to 12">Post-Matric (Classes 11-12)</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Graduation">Gujrat</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Engineering">Haryana</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Medicali">Himanchal Pradesh</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Law">Jammu & Kashmir</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Study Abroad">Jharkhand</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Management">Karnataka</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Upto 8">Kerala</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Upto 8">Madhya Pradesh</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Upto 8">Maharastra</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Upto 8">Manipur</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Upto 8">Meghalaya</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?9 to 10">Mizoram</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+              class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?11 to 12">Nagaland</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Graduation">Odisa</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Engineering">Punjab</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Medicali">Rajasthan</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Law">Sikkim</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Study Abroad">Tamil Nadu</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Management">Telangana</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Management">Tripura</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Management">Uttar Pradesh</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Management">Uttarakhand</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+          <li class="course-category-item">
+
+            <div class="wrapper">
+              <img src="./images/course-category-icon-5-w.png" alt="category icon" class="category-icon default">
+
+              <img src="./images/course-category-icon-5-w.png" alt="category icon white"
+                class="category-icon hover">
+            </div>
+
+            <div class="course-category-content">
+              <h3 class="category-title">
+                <a href="view.php?Management">West Bengal</a>
+              </h3>
+
+              <p class="category-subtitle">Search Temple</p>
+            </div>
+
+          </li>
+
+
+        </ul>
+
+      </section>
+</body>
+</html>
